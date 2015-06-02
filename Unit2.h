@@ -25,9 +25,12 @@ __published:	// IDE-managed Components
 	TTetheringAppProfile *TetheringAppProfile1;
 	TLabel *Label1;
 	TLabel *Label2;
+	TImageControl *ImageControl1;
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall TetheringManager1PairedFromLocal(TObject * const Sender, const TTetheringManagerInfo &AManagerInfo);
 	void __fastcall TetheringAppProfile1Resources0ResourceReceived(TObject * const Sender,
+          TRemoteResource * const AResource);
+	void __fastcall TetheringAppProfile1Resources1ResourceReceived(TObject * const Sender,
           TRemoteResource * const AResource);
 
 

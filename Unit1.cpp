@@ -46,6 +46,19 @@ void __fastcall TForm1::EditButton1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+	if (OpenDialog1->Execute()) {
+		ImageControl1->LoadFromFile(OpenDialog1->FileName);
+
+		TMemoryStream* LStream = new TMemoryStream;
+		ImageControl1->Bitmap->SaveToStream(LStream);
+		LStream->Position = 0;
+
+		TetheringAppProfile1->Resources->FindByName("SomeImage")->Value = TResourceValue::_op_Implicit(LStream);
+	}
+}
+//---------------------------------------------------------------------------
 
 
 

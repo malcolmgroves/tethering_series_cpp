@@ -36,6 +36,13 @@ void __fastcall TForm2::TetheringAppProfile1Resources0ResourceReceived(TObject *
 
 
 
+void __fastcall TForm2::TetheringAppProfile1Resources1ResourceReceived(TObject * const Sender,
+          TRemoteResource * const AResource)
+{
+	AResource->Value.AsStream->Position = 0;
+	ImageControl1->Bitmap->LoadFromStream(AResource->Value.AsStream);
+}
+//---------------------------------------------------------------------------
 
 
 
