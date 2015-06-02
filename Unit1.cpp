@@ -72,5 +72,17 @@ void __fastcall TForm1::TetheringAppProfile1ResourceReceived(TObject * const Sen
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::actResetExecute(TObject *Sender)
+{
+	Edit1->Text = "";
+    Label2->Text = "";
+}
+//---------------------------------------------------------------------------
 
+void __fastcall TForm1::actResetUpdate(TObject *Sender)
+{
+	actReset->Enabled = (Edit1->Text != "") ||
+						(Label2->Text != "");
+}
+//---------------------------------------------------------------------------
 

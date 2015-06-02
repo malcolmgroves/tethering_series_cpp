@@ -68,6 +68,16 @@ object Form2: TForm2
     Text = 'Send Transient'
     OnClick = Button1Click
   end
+  object Button2: TButton
+    Action = Action1
+    Anchors = [akLeft, akTop, akRight]
+    Enabled = True
+    ImageIndex = -1
+    Position.X = 328.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 9
+    Visible = True
+  end
   object OpenDialog1: TOpenDialog
     Left = 304
     Top = 104
@@ -84,7 +94,14 @@ object Form2: TForm2
     Manager = TetheringManager1
     Text = 'TetheringAppProfile1'
     Group = 'TestGroup'
-    Actions = <>
+    Actions = <
+      item
+        Name = 'lactReset'
+        IsPublic = True
+        Kind = Mirror
+        Action = Action1
+        NotifyUpdates = False
+      end>
     Resources = <
       item
         Name = 'SomeText'
@@ -101,5 +118,12 @@ object Form2: TForm2
       end>
     Left = 40
     Top = 136
+  end
+  object ActionList1: TActionList
+    Left = 304
+    Top = 88
+    object Action1: TAction
+      Text = 'Action1'
+    end
   end
 end

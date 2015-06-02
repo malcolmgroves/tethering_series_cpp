@@ -31,6 +31,9 @@ __published:	// IDE-managed Components
 	TImageControl *ImageControl2;
 	TButton *Button1;
 	TOpenDialog *OpenDialog1;
+	TButton *Button2;
+	TActionList *ActionList1;
+	TAction *Action1;
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall TetheringManager1PairedFromLocal(TObject * const Sender, const TTetheringManagerInfo &AManagerInfo);
 	void __fastcall TetheringAppProfile1Resources0ResourceReceived(TObject * const Sender,
