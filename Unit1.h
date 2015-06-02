@@ -25,11 +25,14 @@ __published:	// IDE-managed Components
 	TTetheringAppProfile *TetheringAppProfile1;
 	TButton *Button1;
 	TLabel *Label1;
+	TEdit *Edit1;
+	TEditButton *EditButton1;
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall TetheringManager1PairedToRemote(TObject * const Sender, const TTetheringManagerInfo &AManagerInfo);
 	void __fastcall TetheringManager1RequestManagerPassword(TObject * const Sender,
           const UnicodeString ARemoteIdentifier, UnicodeString &Password);
+	void __fastcall EditButton1Click(TObject *Sender);
 
 
 

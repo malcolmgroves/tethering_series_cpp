@@ -40,6 +40,11 @@ void __fastcall TForm1::TetheringManager1RequestManagerPassword(TObject * const 
 	Password = "The wingless dove protects its nest";
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm1::EditButton1Click(TObject *Sender)
+{
+	TetheringAppProfile1->Resources->FindByName("SomeText")->Value = TResourceValue::_op_Implicit(Edit1->Text);
+}
+//---------------------------------------------------------------------------
 
 
 

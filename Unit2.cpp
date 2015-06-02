@@ -27,6 +27,12 @@ void __fastcall TForm2::TetheringManager1PairedFromLocal(TObject * const Sender,
 						  				AManagerInfo.ManagerName)));
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm2::TetheringAppProfile1Resources0ResourceReceived(TObject * const Sender,
+		  TRemoteResource * const AResource)
+{
+	Label2->Text = AResource->Value.AsString;
+}
+//---------------------------------------------------------------------------
 
 
 
