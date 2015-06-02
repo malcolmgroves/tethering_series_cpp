@@ -20,7 +20,7 @@ object Form1: TForm1
     Anchors = [akLeft, akTop, akRight]
     Position.X = 96.000000000000000000
     Position.Y = 10.000000000000000000
-    Size.Width = 361.000000000000000000
+    Size.Width = 273.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'Label1'
@@ -61,6 +61,19 @@ object Form1: TForm1
     Left = 120
     Top = 120
   end
+  object Label2: TLabel
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 208.000000000000000000
+    Position.Y = 42.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ImageControl2: TImageControl
+    Position.X = 208.000000000000000000
+    Position.Y = 80.000000000000000000
+    TabOrder = 14
+  end
   object TetheringManager1: TTetheringManager
     OnPairedToRemote = TetheringManager1PairedToRemote
     OnRequestManagerPassword = TetheringManager1RequestManagerPassword
@@ -84,6 +97,7 @@ object Form1: TForm1
         IsPublic = True
         ResType = Stream
       end>
+    OnResourceReceived = TetheringAppProfile1ResourceReceived
     Left = 32
     Top = 152
   end

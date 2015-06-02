@@ -44,6 +44,31 @@ void __fastcall TForm2::TetheringAppProfile1Resources1ResourceReceived(TObject *
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm2::EditButton1Click(TObject *Sender)
+{
+	TetheringAppProfile1->SendString(
+		TetheringManager1->RemoteProfiles->First(),
+		"ReplyText",
+		Edit1->Text);
+}
+//---------------------------------------------------------------------------
 
+void __fastcall TForm2::Button1Click(TObject *Sender)
+{
+	if (OpenDialog1->Execute()) {
+		ImageControl2->LoadFromFile(OpenDialog1->FileName);
+
+		TMemoryStream* LStream = new TMemoryStream;
+		ImageControl2->Bitmap->SaveToStream(LStream);
+		LStream->Position = 0;
+
+		TetheringAppProfile1->SendStream(
+			TetheringManager1->RemoteProfiles->First(),
+			"ReplyImage",
+			LStream);
+	}
+
+}
+//---------------------------------------------------------------------------
 
 

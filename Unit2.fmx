@@ -13,7 +13,7 @@ object Form2: TForm2
     Anchors = [akLeft, akTop, akRight]
     Position.X = 8.000000000000000000
     Position.Y = 8.000000000000000000
-    Size.Width = 409.000000000000000000
+    Size.Width = 193.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'Label1'
@@ -21,7 +21,7 @@ object Form2: TForm2
   object Label2: TLabel
     Position.X = 8.000000000000000000
     Position.Y = 32.000000000000000000
-    Size.Width = 401.000000000000000000
+    Size.Width = 193.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'Label2'
@@ -30,6 +30,47 @@ object Form2: TForm2
     Position.X = 8.000000000000000000
     Position.Y = 72.000000000000000000
     TabOrder = 2
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 5
+    CanFocus = False
+    Position.X = 208.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'ReplyText'
+    object EditButton1: TEditButton
+      CanFocus = False
+      Cursor = crArrow
+      Size.Width = 92.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Send Transient'
+      OnClick = EditButton1Click
+    end
+  end
+  object ImageControl2: TImageControl
+    Position.X = 192.000000000000000000
+    Position.Y = 72.000000000000000000
+    TabOrder = 6
+  end
+  object Button1: TButton
+    Position.X = 296.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Send Transient'
+    OnClick = Button1Click
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 304
+    Top = 104
   end
   object TetheringManager1: TTetheringManager
     OnPairedFromLocal = TetheringManager1PairedFromLocal

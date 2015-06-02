@@ -60,6 +60,17 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::TetheringAppProfile1ResourceReceived(TObject * const Sender,
+          TRemoteResource * const AResource)
+{
+	if (AResource->Hint == "ReplyText") {
+		Label2->Text = AResource->Value.AsString;
+	} else if (AResource->Hint == "ReplyImage") {
+		AResource->Value.AsStream->Position = 0;
+		ImageControl2->Bitmap->LoadFromStream(AResource->Value.AsStream);
+	};
+}
+//---------------------------------------------------------------------------
 
 
 

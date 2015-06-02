@@ -30,6 +30,8 @@ __published:	// IDE-managed Components
 	TImageControl *ImageControl1;
 	TButton *Button2;
 	TOpenDialog *OpenDialog1;
+	TLabel *Label2;
+	TImageControl *ImageControl2;
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall TetheringManager1PairedToRemote(TObject * const Sender, const TTetheringManagerInfo &AManagerInfo);
@@ -37,6 +39,7 @@ __published:	// IDE-managed Components
           const UnicodeString ARemoteIdentifier, UnicodeString &Password);
 	void __fastcall EditButton1Click(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);
+	void __fastcall TetheringAppProfile1ResourceReceived(TObject * const Sender, TRemoteResource * const AResource);
 
 
 

@@ -26,12 +26,19 @@ __published:	// IDE-managed Components
 	TLabel *Label1;
 	TLabel *Label2;
 	TImageControl *ImageControl1;
+	TEdit *Edit1;
+	TEditButton *EditButton1;
+	TImageControl *ImageControl2;
+	TButton *Button1;
+	TOpenDialog *OpenDialog1;
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall TetheringManager1PairedFromLocal(TObject * const Sender, const TTetheringManagerInfo &AManagerInfo);
 	void __fastcall TetheringAppProfile1Resources0ResourceReceived(TObject * const Sender,
           TRemoteResource * const AResource);
 	void __fastcall TetheringAppProfile1Resources1ResourceReceived(TObject * const Sender,
           TRemoteResource * const AResource);
+	void __fastcall EditButton1Click(TObject *Sender);
+	void __fastcall Button1Click(TObject *Sender);
 
 
 private:	// User declarations
